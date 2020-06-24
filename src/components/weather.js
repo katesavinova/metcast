@@ -5,7 +5,16 @@ class Weather extends React.Component {
 
         return (
             <div>
-                <form><input type="text"></input></form>
+                {
+                    this.props.city &&
+                    <div>
+                        <p>Местоположение:{this.props.city},{this.props.country}</p>
+                        <p>Темпиратура:{this.props.temp}</p>
+                        <p>Давление:{this.props.pressure}</p>
+                        <p>Закат Солнца:{this.props.sunset}</p>
+                    </div>
+                }
+
             </div>
         );
     }

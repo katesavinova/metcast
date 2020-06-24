@@ -4,7 +4,7 @@ const Weather = props => {
 
 
     return (
-        <div>
+        <div className="infoWeath">
             {
                 props.city &&
                 <div>
@@ -14,7 +14,7 @@ const Weather = props => {
                     <p>Закат Солнца:{props.sunset}</p>
                 </div>
             }
-            <p>{props.error}</p>
+            <p className="error">{props.error}</p>
         </div>
     );
 
